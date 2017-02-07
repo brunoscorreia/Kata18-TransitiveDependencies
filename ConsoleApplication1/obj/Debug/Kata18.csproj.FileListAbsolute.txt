@@ -1,0 +1,12 @@
+C:\Users\guilherme.costi\Desktop\Kata18\Kata18\ConsoleApplication1\obj\Debug\Kata18.csprojResolveAssemblyReference.cache
+C:\Users\guilherme.costi\Desktop\Kata18\Kata18\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\guilherme.costi\Desktop\Kata18\Kata18\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\guilherme.costi\Desktop\Kata18\Kata18\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\guilherme.costi\Desktop\Kata18\Kata18\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\guilherme.costi\Desktop\Kata18\Kata18\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\bruno.silva\Desktop\Kata18\Kata18\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\bruno.silva\Desktop\Kata18\Kata18\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+C:\Users\bruno.silva\Desktop\Kata18\Kata18\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+C:\Users\bruno.silva\Desktop\Kata18\Kata18\ConsoleApplication1\obj\Debug\Kata18.csprojResolveAssemblyReference.cache
+C:\Users\bruno.silva\Desktop\Kata18\Kata18\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\bruno.silva\Desktop\Kata18\Kata18\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb

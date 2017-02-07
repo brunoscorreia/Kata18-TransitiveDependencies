@@ -1,0 +1,8 @@
+c:\users\bruno.silva\documents\visual studio 2015\Projects\Kata18\Kata18\obj\Debug\Kata18.csprojResolveAssemblyReference.cache
+c:\users\bruno.silva\documents\visual studio 2015\Projects\Kata18\Kata18\bin\Debug\Kata18.dll
+c:\users\bruno.silva\documents\visual studio 2015\Projects\Kata18\Kata18\bin\Debug\Kata18.pdb
+c:\users\bruno.silva\documents\visual studio 2015\Projects\Kata18\Kata18\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\bruno.silva\documents\visual studio 2015\Projects\Kata18\Kata18\bin\Debug\nunit.framework.dll
+c:\users\bruno.silva\documents\visual studio 2015\Projects\Kata18\Kata18\bin\Debug\nunit.framework.xml
+c:\users\bruno.silva\documents\visual studio 2015\Projects\Kata18\Kata18\obj\Debug\Kata18.dll
+c:\users\bruno.silva\documents\visual studio 2015\Projects\Kata18\Kata18\obj\Debug\Kata18.pdb
