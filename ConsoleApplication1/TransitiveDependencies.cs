@@ -1,30 +1,51 @@
-﻿using ConsoleApplication1.Model;
-using System;
-using System.Collections.Generic;
+﻿// -----------------------------------------------------------------------
+// <copyright file="TransitiveDependencies.cs" company="Concrete-Solutions">
+// Concrete Solutions all rights reserved
+// </copyright>
+// -----------------------------------------------------------------------
+
+using TransitiveDependencies.Model;
 
 namespace Kata18
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     public class TransitiveDependencies
     {
-        private List<Class> ClassDependencies; 
-
-        private List<Class> FullSet; 
+        // All structure
+        private List<Base> ClassDependencies; 
         
-        public void AddDirect(string item, string[] dependencies)
+        // Recursive queue
+        private List<Base> Queue; 
+
+        //Branch of children
+        private List<Base> fullSetDependencies;
+
+        /// <summary>
+        /// This method add the class and his children        
+        /// </summary>
+        /// <param name="item">Class to be selected</param>
+        /// <param name="dependencies">Dependencies to be add</param>
+        /// <returns>The class object filled</returns>        
+        public Base AddDirect(string item, string[] dependencies)
         {
-            GetClassDependencies(ClassDependencies);
+            ClassDependencies = this.GetClassDependencies(ClassDependencies); 
 
-            Class thisClass = SelectClass(item); 
+            Base thisClass = this.SelectClass(item); 
 
-            List<Class> newChildrens = new List<Class>();
+            List<Base> newChildrens = new List<Base>(); 
 
             foreach (var dep in dependencies) 
             {
-                Class Child = SelectClass(dep);
+                Base Child = SelectClass(dep);
 
                 if (Child == null) 
                 {
-                    Child = new Class(item);
+                    Child = new Base(dep, new List<Base>());
+
+                    ClassDependencies.Add(Child); 
                 }
 
                 newChildrens.Add(Child); 
@@ -32,51 +53,91 @@ namespace Kata18
 
             if (thisClass == null) 
             {
-                thisClass = new Class(item, newChildrens);
+                thisClass = new Base(item, newChildrens);
+
+                ClassDependencies.Add(thisClass); 
             }
             else
             {
-                throw new Exception("This Class Children have already been assigned");
+                thisClass.Childrens = newChildrens;
             }
 
-            ClassDependencies.Add(thisClass); 
+            return (thisClass);
         }
 
+        /// <summary>
+        /// This method will mount all children from a class     
+        /// </summary>
+        /// <param name="item">Class to be selected</param>        
+        /// <returns>The list of string with children</returns>  
         public string[] Dependecies_For(string item) 
-        { 
-            Class thisClass = SelectClass(item); 
+        {
+            Queue = new List<Base>(); 
+
+            fullSetDependencies = new List<Base>(); 
+
+            Base thisClass = SelectClass(item);
 
             if (thisClass == null) throw new Exception("Couldn't find the Class: " + item); 
 
+            Queue.Add(thisClass); 
+
             BuildFullClassDependencies(thisClass); 
 
-            return GetFullSetDependenciesNames(FullSet);
+            return GetFullSetDependenciesNames(fullSetDependencies); 
         }
 
-        private void BuildFullClassDependencies(Class thisClass) 
+        /// <summary>
+        /// This method will mount all children from a class     
+        /// </summary>
+        /// <param name="thisClass">Class to be selected</param>        
+        /// <returns>The list of string with children</returns> 
+        private void BuildFullClassDependencies(Base thisClass)
         {
+            fullSetDependencies.Add(Queue.First());
+
+            Queue.Remove(Queue.First());
+
             foreach (var child in thisClass.Childrens) 
             {
-                CheckDirectDeadLock(thisClass, child);
-                //Pending to review Deadlock
-                FullSet.Add(child); 
+                CheckDirectDeadLock(thisClass, child); 
+
+                if (!Queue.Contains(child)) Queue.Add(child);               
             }
 
-            foreach (var item in FullSet) 
+            if (Queue.Count <= 0)
             {
-                BuildFullClassDependencies(item);
+                return;
             }
+
+            BuildFullClassDependencies(Queue.First());
+
+            return;
         }
 
-        private List<Class> GetClassDependencies(List<Class> ClassDependencies) 
+        /// <summary>
+        /// This method will start the global class    
+        /// </summary>
+        /// <param name="ClassDependencies"></param>        
+        /// <returns>Dependencies</returns> 
+        private List<Base> GetClassDependencies(List<Base> ClassDependencies) 
         {
             if (ClassDependencies == null)
-                return new List<Class>();
+            {
+                return new List<Base>();
+            }
             else
+            {
                 return ClassDependencies;
+            }
         }
 
-        public string[] GetFullSetDependenciesNames(List<Class> fullSetDep) 
+        /// <summary>
+        /// This method will change the list of class into a list of string with the names to return    
+        /// </summary>
+        /// <param name="fullSetDep">String list</param>        
+        /// <returns>The list of string</returns> 
+        public string[] GetFullSetDependenciesNames(List<Base> fullSetDep) 
         {
             string[] stringList = new string[fullSetDep.Count];
 
@@ -92,23 +153,36 @@ namespace Kata18
             return stringList;
         }
 
-        public void CheckDirectDeadLock(Class parent, Class child) 
+        /// <summary>
+        /// This method will check the deadlock  
+        /// </summary>
+        /// <param name="parent">Get the parent name to compare</param>        
+        /// <param name="child">Get the name of child</param>        
+        public void CheckDirectDeadLock(Base parent, Base child) 
         {
             if (parent.Name.Equals(child.Name)) throw new Exception("Deadlock Detected!");
         }
 
-
-        //TODO: Review this method
-        public void CheckChildDeadLock(Class child)
+        // TO REVIEW
+        // I need to use a nosql to support more items 
+        public void CheckChildDeadLock(Base child)
         {
-            if (FullSet.Contains(child)) throw new Exception("Deadlock Detected!");
+            if (Queue.Contains(child)) throw new Exception("Deadlock Detected!");
         }
 
-        private Class SelectClass(string letter) 
+        /// <summary>
+        /// This method will search by letter in global list    
+        /// </summary>
+        /// <param name="letter">Letter return</param>        
+        /// <returns>Null</returns> 
+        private Base SelectClass(string letter)
         {
-            foreach (var item in ClassDependencies)
+            if (ClassDependencies != null)
             {
-                if (item.Name.Equals(letter)) return item;
+                foreach (var item in ClassDependencies)
+                {
+                    if (item.Name.Equals(letter)) return item;
+                }
             }
 
             return null;

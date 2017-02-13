@@ -5,8 +5,14 @@ C:\Users\guilherme.costi\Desktop\Kata18\Kata18\ConsoleApplication1\bin\Debug\Con
 C:\Users\guilherme.costi\Desktop\Kata18\Kata18\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
 C:\Users\guilherme.costi\Desktop\Kata18\Kata18\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
 C:\Users\bruno.silva\Desktop\Kata18\Kata18\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\bruno.silva\Desktop\Kata18\Kata18\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+C:\Users\bruno.silva\Desktop\Kata18\Kata18\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
 C:\Users\bruno.silva\Desktop\Kata18\Kata18\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
 C:\Users\bruno.silva\Desktop\Kata18\Kata18\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
 C:\Users\bruno.silva\Desktop\Kata18\Kata18\ConsoleApplication1\obj\Debug\Kata18.csprojResolveAssemblyReference.cache
-C:\Users\bruno.silva\Desktop\Kata18\Kata18\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
-C:\Users\bruno.silva\Desktop\Kata18\Kata18\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\ConsoleApplication1\obj\Debug\Kata18.csprojResolveAssemblyReference.cache
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\ConsoleApplication1\bin\Debug\TransitiveDependencies.exe.config
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\ConsoleApplication1\bin\Debug\TransitiveDependencies.exe
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\ConsoleApplication1\bin\Debug\TransitiveDependencies.pdb
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\ConsoleApplication1\obj\Debug\TransitiveDependencies.exe
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\ConsoleApplication1\obj\Debug\TransitiveDependencies.pdb

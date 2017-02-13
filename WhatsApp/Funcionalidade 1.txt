@@ -1,0 +1,98 @@
+#language: pt
+  
+  Funcionalidade 1: Criação de Grupo no WhatsApp
+
+  Para criação de um grupo no whatsapp
+  Como usuario
+  Eu quero adicionar meus contatos existentes em um único chat do WhatsApp
+  De modo com que todos possam compartilhar das mesmas informações 
+  
+  CONTEXTO
+  - Já possuir o aplicativo
+  - Estar devidamente cadastrado
+  - Possuir os contatos na agenda do dispositivo  
+  
+  FORA DE ESCOPO
+  - Salvar novos contatos para utilizar no aplicativo  
+  - Validação de entrada de dados do usuário
+
+  Cenario: Criar um grupo adicionando contato através do auto-completar usando o nome do contato
+    Dado que estou na página inicial do aplicativo
+    Quando eu tocar no menu do canto superior direito identificado com 3 pontos na vertical
+    E selecionar a opção "Novo Grupo"
+	E preencher o input requerido com o nome de grupo desejado
+	E tocar no botão "Avançar"
+	E digitar o nome de um contato já existentes da agenda	
+	E selecionar pelo menos esse contato 
+	E tocar no botão "Criar"
+	Então o grupo será criado com sucesso
+	
+	Cenario: Criar um grupo adicionando contato através do auto-completar usando o número do contato
+    Dado que estou na página inicial do aplicativo
+    Quando eu tocar no menu do canto superior direito identificado com 3 pontos na vertical
+    E selecionar a opção "Novo Grupo"
+	E preencher o input requerido com o nome de grupo desejado
+	E tocar no botão "Avançar"
+	E digitar o número de um contato já existentes da agenda	
+	E selecionar pelo menos esse contato 
+	E tocar no botão "Criar"
+	Então o grupo será criado com sucesso
+	
+	Cenario: Criar um grupo adicionando contato através do botão adicionar identificado com um sinal de + utilizando-se da pesquisa auto-completar
+    Dado que estou na página inicial do aplicativo
+    Quando eu tocar no menu do canto superior direito identificado com 3 pontos na vertical
+    E selecionar a opção "Novo Grupo"
+	E preencher o input requerido com o nome de grupo desejado
+	E tocar no botão "Avançar"
+	E tocar no botão adicionar identificado com o sinal de + 
+	E no input "Pesquisar" digitar o nome ou número de um contato já existentes da agenda	
+	E selecionar pelo menos esse contato 
+	E tocar no botão  "Concluído"
+	E tocar no botão "Criar"
+	Então o grupo será criado com sucesso
+		
+	Cenario: Criar um grupo adicionando contato através do botão adicionar identificado com um sinal de + utilizando-se da listagem de contatos
+    Dado que estou na página inicial do aplicativo
+    Quando eu tocar no menu do canto superior direito identificado com 3 pontos na vertical
+    E selecionar a opção "Novo Grupo"
+	E preencher o input requerido com o nome de grupo desejado
+	E tocar no botão "Avançar"
+	E tocar no botão adicionar identificado com o sinal de + 
+	E selecionar um contato existente preenchendo o checkbox respectivo ao contato desejado	
+	E tocar no botão  "Concluído"
+	E tocar no botão "Criar"
+	Então o grupo será criado com sucesso
+	
+	Cenario: Criar um grupo sem nome
+    Dado que estou na página inicial do aplicativo
+    Quando eu tocar no menu do canto superior direito identificado com 3 pontos na vertical
+    E selecionar a opção "Novo Grupo"
+	E tocar em "Avançar"
+	Então um alerta será mostrado solicitando a criação de um nome e opcionalmente adicionar uma imagem
+	
+	Cenario: Criar um grupo sem contato
+    Dado que estou na página inicial do aplicativo
+    Quando eu tocar no menu do canto superior direito identificado com 3 pontos na vertical
+    E selecionar a opção "Novo Grupo"
+	E preencher o input requerido com o nome de grupo desejado
+	E tocar em "Avançar"
+	E tocar em "Criar"
+	Então um alerta será mostrado solicitando que pelo menos um contato seja adicionado ao grupo qu será criado
+	
+	Cenario: Criar um grupo tentando adicionar um contato já adicionado
+    Dado que estou na página inicial do aplicativo
+    Quando eu tocar no menu do canto superior direito identificado com 3 pontos na vertical
+    E selecionar a opção "Novo Grupo"
+	E preencher o input requerido com o nome de grupo desejado
+	E tocar no botão "Avançar"
+	E tocar no botão adicionar identificado com o sinal de + 
+	E no input "Pesquisar" digitar o nome ou número de um contato já existentes da agenda	
+	E selecionar pelo menos esse contato 
+	E no input "Pesquisar" digitar o nome ou número de um contato já existentes da agenda novamente	
+	Então o auto-completar não irá funcionar de forma que o contato já adicionado não seja listado para ser selecionado
+	
+	
+	
+	
+	
+	

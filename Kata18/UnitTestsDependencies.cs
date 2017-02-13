@@ -1,12 +1,17 @@
-﻿using NUnit.Framework;
+﻿// -----------------------------------------------------------------------
+// <copyright file="UnitTestsDependencies.cs" company="Concrete-Solutions">
+// Concrete Solutions all rights reserved
+// </copyright>
+// -----------------------------------------------------------------------
+using NUnit.Framework;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Kata18
 {
     [TestClass]
-    public class Dependencies
+    public class UnitTestsDependencies
     {
-        TransitiveDependencies _dependencies;
+        TransitiveDependencies _dependencies;        
 
         public void SetUp()
         {
@@ -25,31 +30,22 @@ namespace Kata18
             _dependencies.AddDirect("F", new[] { "H" });
         }
 
-        /*TODO Unit
-         - Check a case where there is no class in which user want to know the children           
-         - Check DeadLock from a class recursive (same type A->A)         
-         - Try to create diferents childrens for same class         
-        */
-        [Test]
-
         [TestCase("A", new[] { "B", "C", "E", "F", "G", "H" })]
-
         [TestCase("B", new[] { "C", "E", "F", "G", "H" })]
-
         [TestCase("C", new[] { "G" })]
-
         [TestCase("D", new[] { "A", "B", "C", "E", "F", "G", "H" })]
-
         [TestCase("E", new[] { "F", "H" })]
-
         [TestCase("F", new[] { "H" })]
-
         [TestCase("A", null)]
-
         [TestCase("B", new string [] { })]
         public void FindsDependencies(string item, string[] dependencies)
         {
             NUnit.Framework.Assert.That(_dependencies.Dependecies_For(item), Is.EqualTo(dependencies));
         }
+
+        // TODO
+        // Unit to check if not exist a class which I need to known the children
+        // Unit to check the deadlock in a class, to same type A->A
+        // Unit to create differents children to same class
     }
 }

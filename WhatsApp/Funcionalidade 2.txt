@@ -1,0 +1,104 @@
+﻿#language: pt
+  
+  Funcionalidade 2: Envio de foto(s) 
+
+  Para enviar uma foto para um contato no whatsapp
+  Como usuario
+  Eu quero compartilhar fotos já registradas e gravadas e compartilhar fotos tiradas na hora que eu quiser
+  De modo com que o meu contato receba essa foto e a utilize ou não quando necessário
+  
+  CONTEXTO
+  - Já possuir o aplicativo
+  - Estar devidamente cadastrado
+  - Possuir os contatos na agenda do dispositivo  
+  - Possuir pelo menos uma foto gravada no dispositivo
+  
+   Cenario: Enviar uma foto existente para um contato através da opção anexo
+    Dado que estou na tela de um contato
+    Quando eu tocar no menu do canto superior direito identificado com o ícone de um clips
+    E selecionar a opção "Galeria"
+	E selecionar a guia "FOTOS" 
+	E tocar em qualquer imagem  exibida
+	E selecionar uma foto já existente no album selecionado		
+	E tocar no botão enviar 
+	Então a foto existente será enviada com sucesso
+	
+	Cenario: Enviar fotos existente para um contato através da opção anexo
+    Dado que estou na tela de um contato
+    Quando eu tocar no menu do canto superior direito identificado com o ícone de um clips
+    E selecionar a opção "Galeria"
+	E selecionar a guia "FOTOS" 
+	E tocar em qualquer imagem  exibida
+	E desmarcar o checkbox no canto superior direito
+	E selecionar duas ou mais fotos
+	E tocar no botão "OK"
+	E tocar no botão enviar 
+	Então as fotos existentes serão enviadas com sucesso
+	
+	Cenario: Enviar uma foto tirada no momemto desejado para um contato através da opção anexo
+    Dado que estou na tela de um contato
+    Quando eu tocar no menu do canto superior direito identificado com o ícone de um clips
+    E selecionar a opção "Câmera"
+	E selecionar a opção "Tirar uma foto"
+	E "tirar" a foto através da câmera do dispositivo	
+	E tocar no botão enviar 
+	Então a foto tirada será enviada com sucesso
+	
+	Cenario: Enviar uma foto existente para um contato através do menu identificado com 3 pontos na vertical
+    Dado que estou na tela de um contato
+    Quando eu tocar no menu do canto superior direito identificado com 3 pontos na vertical
+    E selecionar a opção "Mídia"
+	E selecionar a foto para ser enviada
+	E tocar na opção de compartilhar identificada com uma seta para direita
+	E selecionar o contato desejado
+	E confirmar o envio tocando na opção "ok"
+	Então a foto existente será enviada com sucesso
+	
+	Cenario: Enviar uma foto existente para um contato através do botão de câmera
+    Dado que estou na tela de um contato
+    Quando eu tocar no menu de câmera
+    E selecionar uma foto existente na barra de listagem de fotos
+	E tocar no botão enviar 
+	Então a foto existente será enviada com sucesso
+	
+	Cenario: Enviar uma foto tirada no momemto desejado para um contato através do botão câmera
+    Dado que estou na tela de um contato
+    Quando eu tocar no menu de câmera
+    E "tirar" a foto através da câmera do dispositivo	
+	E tocar no botão enviar 
+	Então a foto tirada será enviada com sucesso
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

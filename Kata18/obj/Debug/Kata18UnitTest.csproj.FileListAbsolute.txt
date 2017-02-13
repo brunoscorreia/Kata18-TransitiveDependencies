@@ -18,3 +18,13 @@ C:\Users\bruno.silva\Desktop\Kata18\Kata18\Kata18\bin\Debug\nunit.framework.xml
 C:\Users\bruno.silva\Desktop\Kata18\Kata18\Kata18\obj\Debug\Kata18UnitTest.csprojResolveAssemblyReference.cache
 C:\Users\bruno.silva\Desktop\Kata18\Kata18\Kata18\obj\Debug\Kata18.dll
 C:\Users\bruno.silva\Desktop\Kata18\Kata18\Kata18\obj\Debug\Kata18.pdb
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\Kata18\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\Kata18\bin\Debug\nunit.framework.dll
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\Kata18\bin\Debug\nunit.framework.xml
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\Kata18\obj\Debug\Kata18UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\Kata18\bin\Debug\Tests.dll
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\Kata18\bin\Debug\Tests.pdb
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\Kata18\bin\Debug\TransitiveDependencies.exe
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\Kata18\bin\Debug\TransitiveDependencies.pdb
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\Kata18\obj\Debug\Tests.dll
+C:\Users\bruno.silva\Desktop\Kata18\Kata18_v1\Kata18\obj\Debug\Tests.pdb
